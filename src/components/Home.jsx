@@ -24,7 +24,6 @@ const Home = () => {
       </div>
 
       <Shortener />
-      <Statistics />
     </div>
   );
 };
