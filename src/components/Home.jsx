@@ -17,7 +17,7 @@ const Home = () => {
             Build your brand's recognition and get detailed insights <br /> on
             how your link are performing.
           </p>
-          <button className="lg:py-4 lg:px-6 py-3 px-6 rounded-full bg-teal-300 font-bold text-white hover:bg-teal-500 w-fit text-xl">
+          <button className="lg:py-4 lg:px-6 py-3 px-6 rounded-full bg-teal-400 font-bold text-white hover:bg-teal-500 w-fit text-xl">
             Get Started
           </button>
         </div>
