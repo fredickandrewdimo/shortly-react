@@ -1,6 +1,5 @@
 import Shortener from "./Shortener";
-import Statistics from "./Statistics";
-import Coworker from "../../public/coworkers.svg";
+import Coworker from "/src/assets/coworkers.svg";
 
 const Home = () => {
   return (
