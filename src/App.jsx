@@ -6,7 +6,7 @@ import Statistics from "./components/Statistics";
 
 function App() {
   return (
-    <div className="content">
+    <div className="content font-sans">
       <Navbar />
       <div>
         <Home />
