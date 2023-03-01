@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { hamburgerMenuIconSvgCode, exitIconSvgCode } from "../data/SVGAssets";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
+import { faTimes } from "@fortawesome/free-solid-svg-icons/faTimes";
+
 const Navbar = () => {
   const [isToggled, setIsToggled] = useState(false);
 
@@ -17,13 +21,25 @@ const Navbar = () => {
         </a>
         {/* Hamburger Menu */}
         <button onClick={handleClickMenu} className="md:hidden">
-          {isToggled ? { exitIconSvgCode } : { hamburgerMenuIconSvgCode }}
+          {isToggled ? (
+            <FontAwesomeIcon
+              className="text-black text-3xl hover:text-lightGreen mx-3 md:mx-3"
+              href=""
+              icon={faTimes}
+            />
+          ) : (
+            <FontAwesomeIcon
+              className="text-black text-3xl hover:text-lightGreen mx-3 md:mx-3"
+              href=""
+              icon={faBars}
+            />
+          )}
         </button>
       </div>
 
       {/* Links */}
       <div
-        className={`links w-full md:flex md:items-center md:justify-between my-5 md:my-0 border-b-2 border-teal-500 pb-6 md:pb-0 md:border-0 ${
+        className={`links w-full md:flex md:items-center md:justify-between my-5 md:my-0 border-b-2 border-lightGreen pb-6 md:pb-0 md:border-0 ${
           isToggled ? "show" : "hidden"
         }`}
       >
@@ -47,7 +63,7 @@ const Navbar = () => {
           </a>
           <a
             href=""
-            className="md:py-3 md:px-5 py-2 px-3 rounded-full bg-teal-300 font-bold text-white hover:bg-teal-500 w-fit"
+            className="md:py-3 md:px-5 py-2 px-3 rounded-full bg-teal-300 font-bold text-white hover:bg-darkGreen w-fit"
           >
             Sign Up
           </a>

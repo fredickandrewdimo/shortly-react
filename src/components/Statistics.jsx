@@ -13,7 +13,10 @@ const Statistics = () => {
         <div className="containers md:grid gap-4 grid-cols-3 text-center md:text-start">
           {/* Map the card component details */}
           {details.map((detail) => (
-            <div className="p-6 bg-white rounded-lg flex flex-col items-center mb-5 md:mb-0 text-center">
+            <div
+              key={detail.id}
+              className="p-6 bg-white rounded-lg flex flex-col items-center mb-5 md:mb-0 text-center"
+            >
               <div className="svg bg-violet flex items-center justify-center w-fit p-6 mt-3 mb-5 rounded-full">
                 {detail.logo}
               </div>

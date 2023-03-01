@@ -1,6 +1,7 @@
 const assets = [
   {
-    name: hamburgerMenuIcon,
+    id: 3,
+    name: "HambugerMenuIcon",
     svgCode: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +20,8 @@ const assets = [
     ),
   },
   {
-    name: exitIcon,
+    id: 4,
+    name: "ExitIcon",
     svgCode: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
