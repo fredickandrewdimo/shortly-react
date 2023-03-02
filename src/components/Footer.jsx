@@ -1,11 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faFacebookSquare,
   faTwitter,
   faPinterest,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+
 import links from "../data/footerLinks";
+
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const socialMediaIcons = [
@@ -37,13 +41,13 @@ const Footer = () => {
               {link.headline}
             </h3>
             {link.footerLinks.map((footerLink, index) => (
-              <a
+              <Link
+                to="/"
                 key={index}
-                href=""
                 className="text-gray-500 hover:text-lightGreen"
               >
                 {footerLink}
-              </a>
+              </Link>
             ))}
           </div>
         ))}
@@ -51,13 +55,13 @@ const Footer = () => {
         {/* Map the Social Media Icons */}
         <div className="socials my-5 md:my-0">
           {socialMediaIcons.map((icon, index) => (
-            <a
+            <Link
               key={index}
               className="text-white text-3xl hover:text-lightGreen mx-3 md:mx-3"
-              href=""
+              to="/"
             >
               <FontAwesomeIcon icon={icon} />
-            </a>
+            </Link>
           ))}
         </div>
       </div>

@@ -110,7 +110,7 @@ const Shortener = () => {
             <button
               type="submit"
               disabled={!inputLink}
-              className="bg-lightGreen rounded-md mt-5 text-lg font-bold text-white hover:bg-darkGreen py-2 px-4  w-full md:w-fit"
+              className="bg-lightGreen rounded-md mt-5 md:mt-0 text-lg font-bold text-white hover:bg-darkGreen py-2 px-4  w-full md:w-fit"
             >
               {isClick ? "Shortened!" : "Shorten It!"}
             </button>
@@ -134,7 +134,7 @@ const Shortener = () => {
                   </div>
                   <div className="shortened">
                     <p className="text-sm text-gray-500">Shortened Link</p>
-                    <p>{result.shortened}</p>
+                    <p className="text-lightGreen">{result.shortened}</p>
                   </div>
                 </div>
                 <button

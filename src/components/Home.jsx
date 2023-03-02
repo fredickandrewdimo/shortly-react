@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Shortener from "./Shortener";
 import Coworker from "/src/assets/coworkers.svg";
 
@@ -12,16 +13,18 @@ const Home = () => {
           <h1 className="text-5xl font-bold mb-3 lg:text-7xl text-black">
             More than just shorter links
           </h1>
-          <p className="text-gray-500 mb-5 md:mb-8 lg:text-xl">
+          <p className="text-gray-500 mb-8 md:mb-10 lg:text-xl">
             Build your brand's recognition and get detailed insights <br /> on
             how your link are performing.
           </p>
-          <button className="lg:py-4 lg:px-6 py-3 px-6 rounded-full bg-lightGreen font-bold text-white hover:bg-darkGreen w-fit text-xl">
+          <Link
+            to="/"
+            className="lg:py-4 lg:px-6 py-3 px-6 rounded-full bg-lightGreen font-bold text-white hover:bg-darkGreen w-fit text-xl"
+          >
             Get Started
-          </button>
+          </Link>
         </div>
       </div>
-
       <Shortener />
     </div>
   );
