@@ -42,8 +42,6 @@ const Shortener = () => {
             isCopy: false,
           },
         ]);
-
-        console.log(results);
       })
       .catch((error) => {
         setIsResult(false);
@@ -99,14 +97,19 @@ const Shortener = () => {
               value={inputLink}
               onChange={(e) => setInputLink(e.target.value)}
               type="text"
-              placeholder="Shorten a link here..."
-              className="py-2 px-4 rounded-md md:flex-grow md:mr-3 w-full md:w-fit  md:mb-0"
+              placeholder={
+                isError ? "Please enter a valid URL" : "Shorten a link here..."
+              }
+              className={`py-2 px-4 rounded-md md:flex-grow md:mr-3 w-full md:w-fit  md:mb-0 ${
+                isError ? "border-2 border-rose-500" : ""
+              }`}
             />
             {isError && (
-              <p className="invalid-link my-2  text-red-400 ">Invalid URL</p>
+              <p className="invalid-link my-1  text-rose-500 ">Invalid URL</p>
             )}
             <button
               type="submit"
+              disabled={!inputLink}
               className="bg-lightGreen rounded-md mt-5 text-lg font-bold text-white hover:bg-darkGreen py-2 px-4  w-full md:w-fit"
             >
               {isClick ? "Shortened!" : "Shorten It!"}
@@ -136,7 +139,9 @@ const Shortener = () => {
                 </div>
                 <button
                   onClick={() => handleCopy(result)}
-                  className="py-2 px-4 bg-lightGreen rounded-md text-white font-bold hover:bg-darkGreen"
+                  className={`py-2 px-4 bg-lightGreen rounded-md text-white font-bold hover:bg-darkGreen ${
+                    result.isCopy ? "bg-violet hover:bg-violet" : ""
+                  }`}
                 >
                   {result.isCopy ? "Copied" : "Copy"}
                 </button>
