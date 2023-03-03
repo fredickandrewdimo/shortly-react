@@ -7,9 +7,7 @@ const Shortener = () => {
   // States
   const [shortenedUrl, setShortenedURl] = useState(null);
   const [inputLink, setInputLink] = useState("");
-  // const [isResult, setIsResult] = useState(false);
   const [isError, setIsError] = useState(false);
-  // const [isCopy, setIsCopy] = useState(false);
   const [isClick, setIsClick] = useState(false);
   const [results, setResults] = useState([]);
 
