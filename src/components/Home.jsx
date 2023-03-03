@@ -18,7 +18,7 @@ const Home = () => {
             how your link are performing.
           </p>
           <Link
-            to="/"
+            to="/shortly-react/"
             className="lg:py-4 lg:px-6 py-3 px-6 rounded-full bg-lightGreen font-bold text-white hover:bg-darkGreen w-fit text-xl"
           >
             Get Started

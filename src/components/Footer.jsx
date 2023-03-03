@@ -23,12 +23,12 @@ const Footer = () => {
     <div className="bg-black py-10">
       <div className="content w-11/12 md:w-9/12 mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between md:items-start">
         <div className="logo mb-5">
-          <a
+          <Link
             className="text-white font-bold text-2xl hover:text-lightGreen"
-            href=""
+            to="/shortly-react/"
           >
             Shortly
-          </a>
+          </Link>
         </div>
 
         {/* Map the links */}
@@ -42,7 +42,7 @@ const Footer = () => {
             </h3>
             {link.footerLinks.map((footerLink, index) => (
               <Link
-                to="/"
+                to="/shortly-react/"
                 key={index}
                 className="text-gray-500 hover:text-lightGreen"
               >
@@ -58,7 +58,7 @@ const Footer = () => {
             <Link
               key={index}
               className="text-white text-3xl hover:text-lightGreen mx-3 md:mx-3"
-              to="/"
+              to="/shortly-react/"
             >
               <FontAwesomeIcon icon={icon} />
             </Link>

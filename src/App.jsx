@@ -14,7 +14,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route
-            path="/"
+            path="/shortly-react/"
             element={
               <div>
                 <Home />
