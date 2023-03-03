@@ -7,9 +7,9 @@ const Shortener = () => {
   // States
   const [shortenedUrl, setShortenedURl] = useState(null);
   const [inputLink, setInputLink] = useState("");
-  const [isResult, setIsResult] = useState(false);
+  // const [isResult, setIsResult] = useState(false);
   const [isError, setIsError] = useState(false);
-  const [isCopy, setIsCopy] = useState(false);
+  // const [isCopy, setIsCopy] = useState(false);
   const [isClick, setIsClick] = useState(false);
   const [results, setResults] = useState([]);
 
@@ -30,7 +30,7 @@ const Shortener = () => {
       })
       .then((data) => {
         setShortenedURl(data.result.short_link);
-        setIsResult(true);
+        // setIsResult(true);
         setIsError(false);
         setInputLink("");
 
@@ -44,7 +44,7 @@ const Shortener = () => {
         ]);
       })
       .catch((error) => {
-        setIsResult(false);
+        // setIsResult(false);
         setIsError(true);
         console.error(error);
       });
@@ -118,21 +118,21 @@ const Shortener = () => {
         </div>
       </div>
 
-      {isResult && (
+      {results.length > 0 && (
         <div className="result-container w-11/12 md:w-10/12 mx-auto bg-gray-200 p-7 mb-10 rounded-lg">
           <h3 className="mb-5 font-bold text-xl">Shortened Links</h3>
           <div className="result">
             {results.map((result, index) => (
               <div
                 key={index}
-                className="content py-2 px-4 rounded-md flex-grow w-full md:w-fit bg-white flex items-center justify-between mr-3 mb-5"
+                className="content py-2 px-4 rounded-md flex-grow w-full bg-white flex items-center justify-between mr-3 mb-5"
               >
-                <div className="">
+                <div className="md:flex md:justify-between md:items-center w-full">
                   <div className="url mb-2">
                     <p className="text-sm text-gray-500">Link</p>
                     <p>{result.link}</p>
                   </div>
-                  <div className="shortened">
+                  <div className="shortened md:mr-5">
                     <p className="text-sm text-gray-500">Shortened Link</p>
                     <p className="text-lightGreen">{result.shortened}</p>
                   </div>
